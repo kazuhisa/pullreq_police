@@ -1,0 +1,10 @@
+github_token: deadbeaf
+repos: foo/baa
+title: Detected change of release branch
+body: Detected change of release branch.
+branches:
+  - kitkat
+  - lolipop
+  - marshmallow
+  - nougat
+  - oreo
