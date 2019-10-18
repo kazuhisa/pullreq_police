@@ -10,7 +10,7 @@ list = setting['branches']
     from_branch = list[idx]
     to_branch = list[idx + 1]
     client.create_pull_request(setting['repos'], to_branch, from_branch, setting['title'], setting['body'])
-  rescue Octokit::BadGateway
+  rescue Octokit::BadGateway, Faraday::ConnectionFailed
     retry_counter += 1
     retry if retry_counter < 3
   rescue Octokit::UnprocessableEntity => e
