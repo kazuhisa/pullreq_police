@@ -5,6 +5,7 @@ setting = YAML.load_file('setting.yml')
 client = Octokit::Client.new(access_token: setting['github_token'])
 list = setting['branches']
 (list.size - 1).times.each do |idx|
+  sleep 1
   retry_counter = 0
   begin
     from_branch = list[idx]
