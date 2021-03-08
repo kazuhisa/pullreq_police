@@ -1,5 +1,5 @@
-FROM ruby:2.4.2
-MAINTAINER Kazuhisa Yamamoto <ak.hisashi@gmail.com>
+FROM ruby:2.7.2
+LABEL maintainer "Kazuhisa Yamamoto <ak.hisashi@gmail.com>"
 RUN mkdir /work
 WORKDIR /work
 COPY Gemfile .
